@@ -1,0 +1,107 @@
+/*O * SIGNIFICA QUE VAI SELECIONAR TUDO*/
+*{
+    margin: 0;  
+    padding: 0; /*Retira o padding padrão do navegador*/
+    box-sizing: border-box; /*Faz com que o padding e a borda não aumentem o tamanho do elemento*/
+}
+
+body{
+    display: flex; /*criador de layout, posiciona os elementos na tela*/
+    align-items: center; /*alinha os elementos no centro na horizontal*/
+    justify-content: center; /*alinha os elementos no centro na vertical*/
+    flex-direction: column; /*coloca os elementos em coluna*/
+
+    min-height: 100vh; /*faz com que o body ocupe toda a altura do monitor. min-height=altura mínima*/
+    font-family: sans-serif; /*tira o arredondamento das letras*/
+
+    background-color:black; 
+
+    position: relative; /*pega elementos do body e posiciona em lugares específicos da tela*/
+
+}
+
+.music-control{
+    width: 50px;
+    top: 48px; /*distância do topo da tela*/
+    right: 48px; /*distância da direita da tela*/
+    cursor: pointer;
+    position: absolute;
+}
+
+h1{
+    color: white;
+    margin-bottom: 32px; /*distância entre o h1 e o próximo elemento*/
+    font-size: 80px; /*tamanho da fonte*/
+}
+
+.game{
+    background-image: url(../assets/scene.jpg);
+    background-position: center; /*centraliza a imagem de fundo*/
+    background-size: cover; /*faz com que a imagem de fundo cubra toda a tela*/
+    background-repeat: no-repeat; /*da um jeito de se esticar e cobrir a tela toda*/
+
+    width: 1200px; /*largura do jogo*/
+    height: 720px;
+
+    position: relative; /*pega o jogo e posiciona em um lugar específico da tela. Se não fala que é relative, o personagem fica perdido na tela*/
+}
+
+.character{
+    position: absolute; /*pega o personagem e posiciona em um lugar específico da tela*/
+    width: 75px; /*largura do personagem*/
+}
+
+#ash{
+    right: 2px;
+    z-index: 1; /*faz com que o personagem fique em cima do cenário*/
+
+}
+
+#zubat{
+    display: none; /*esconde o zubat*/
+    right: 90px;
+    top: 550px;
+}
+
+#pikachu{
+    display: none;;
+    right: 600px;
+    top: 330px;
+}
+
+#charmander{
+    display: none;
+    width: 65px;
+    right: 175px;
+    top: 55px;
+}
+
+/*Selecionar uma tag de diversas maneiras
+
+-nome da tag =>  img, audio, h2
+-nome da classe => .class
+-pelo id do elemento => #id
+-selecionar mais de um elemento => .class1, .class2{
+}
+*/
+
+.restart{
+    /*box-model: margin, border, padding, content*/
+    display: none; /*esconde o ícone*/
+    width: 100px; /*largura do ícone*/
+    height: 100px; /*altura do ícone*/
+
+    cursor: pointer; /*muda o cursor para mãozinha quando passar em cima do ícone*/
+    position: absolute; /*pega o ícone e posiciona em um lugar específico da tela*/
+
+    z-index: 3;
+
+}
+
+.restart:hover{
+    opacity: 0.8;
+    transform: scale(1.05); /*aumenta o tamanho do ícone quando passar o mouse em cima*/
+}
+
+
+
